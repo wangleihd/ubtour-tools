@@ -1,0 +1,23 @@
+{
+  "name": "ubtour-tools",
+  "version": "1.0.0",
+  "description": "ubtour tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangleihd/ubtour-tools.git"
+  },
+  "keywords": [
+    "ubtour",
+    "tools"
+  ],
+  "author": "Richard.Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wangleihd/ubtour-tools/issues"
+  },
+  "homepage": "https://github.com/wangleihd/ubtour-tools#readme"
+}
