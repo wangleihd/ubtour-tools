@@ -1,8 +1,8 @@
-const math = require('./math');
+const mathex = require('./mathex');
 
 
 export = {
     mathex,
 };
 
-module.export = export;
+module.exports = export;

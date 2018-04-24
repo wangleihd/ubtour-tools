@@ -106,4 +106,4 @@ export = {
     division,
 };
 
-module.export = export;
+module.exports = export;

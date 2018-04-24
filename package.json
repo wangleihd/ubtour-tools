@@ -1,6 +1,6 @@
 {
   "name": "ubtour-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ubtour tools",
   "main": "index.js",
   "scripts": {
