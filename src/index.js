@@ -1,2 +1,2 @@
 const mathex = require('./mathex');
-module.exports = mathex;
+module.exports.mathex = mathex;

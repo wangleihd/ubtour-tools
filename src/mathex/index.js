@@ -2,7 +2,6 @@
  * 高精度扩展
  * @type {{}}
  */
-var MathEx = {};
 /**
  * 除法
  * @param num1
@@ -10,21 +9,23 @@ var MathEx = {};
  * @returns {number}
  * @constructor
  */
-division = function (num1, num2) {
+exports.division = function (num1, num2) {
     if (num2 == undefined) {
         num2 = 100;
     }
-    var t1 = 0, t2 = 0, r1, r2;
+    var t1 = 0,
+        t2 = 0,
+        r1,
+        r2;
     try {
         t1 = num1.toString().split('.')[1].length;
-    }
-    catch (e) {
-    }
+    } catch (e) {}
     try {
         t2 = num2.toString().split('.')[1].length;
-    }
-    catch (e) {
-    }
+    } catch (e) {}
+    r1 = Number(num1.toString().replace('.', ''));
+    r2 = Number(num2.toString().replace('.', ''));
+    return this.multiplication((r1 / r2), Math.pow(10, t2 - t1));
 };
 /**
  * 乘法
@@ -33,7 +34,7 @@ division = function (num1, num2) {
  * @returns {number}
  * @constructor
  */
-multiplication = function (num1, num2) {
+exports.multiplication = function (num1, num2) {
     if (num1 == undefined) {
         return 0;
     }
@@ -58,7 +59,7 @@ multiplication = function (num1, num2) {
  * @returns {number}
  * @constructor
  */
-addition = function (num1, num2) {
+exports.addition = function (num1, num2) {
     var r1 = 0, r2 = 0, m;
     try {
         r1 = num1.toString().split('.')[1].length;
@@ -78,7 +79,7 @@ addition = function (num1, num2) {
  * @returns {string}
  * @constructor
  */
-subtraction = function (num1, num2) {
+exports.subtraction = function (num1, num2) {
     var r1 = 0, r2 = 0, m, n;
     try {
         r1 = num1.toString().split('.')[1].length;
@@ -92,13 +93,3 @@ subtraction = function (num1, num2) {
     n = (r1 >= r2) ? r1 : r2;
     return ((num1 * m - num2 * m) / m).toFixed(n);
 };
-
-
-ex = {
-    subtraction,
-    addition,
-    multiplication,
-    division,
-};
-
-module.exports = ex;
